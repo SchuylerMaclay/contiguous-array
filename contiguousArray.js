@@ -1,18 +1,18 @@
 function contiguousArray(array) {
-  console.log(array);
   var currentMax = array[0];
   var lastSum = 0;
+  console.log(array);
 
   for (var i = 0; i < array.length; i++){
-    console.log("TOP lastSum:", lastSum);
-    console.log("TOP array[i]:", array[i]);
-    console.log("TOP currentMax:", currentMax);
-    lastSum += array[i];
+    // console.log("TOP lastSum:", lastSum);
+    // console.log("TOP array[i]:", array[i]);
+    // console.log("TOP currentMax:", currentMax);
     console.log("lastSum NEW:", lastSum);
+
     if (lastSum + array[i] <= 0) {
       lastSum = 0;
       console.log("reset lastSum:", lastSum);
-      console.log(lastSum);
+
 
     } else if (lastSum + array[i] >= 0) {
       console.log("before continue lastSum:", lastSum);
@@ -21,7 +21,7 @@ function contiguousArray(array) {
       lastSum += array[i];
       console.log("updated continue lastSum:", lastSum);
       if (lastSum > currentMax) {
-          currentMax = lastSum ;
+        currentMax = lastSum;
       }
     }
   }
